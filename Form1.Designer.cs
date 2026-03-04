@@ -74,7 +74,7 @@
             this.lblTitleTurn.ForeColor = System.Drawing.Color.Gold;
             this.lblTitleTurn.Location = new System.Drawing.Point(135, 157);
             this.lblTitleTurn.Name = "lblTitleTurn";
-            this.lblTitleTurn.Size = new System.Drawing.Size(82, 42);
+            this.lblTitleTurn.Size = new System.Drawing.Size(79, 41);
             this.lblTitleTurn.TabIndex = 2;
             this.lblTitleTurn.Text = "Turn";
             // 
@@ -97,7 +97,7 @@
             this.lblTitleWinner.ForeColor = System.Drawing.Color.Gold;
             this.lblTitleWinner.Location = new System.Drawing.Point(117, 275);
             this.lblTitleWinner.Name = "lblTitleWinner";
-            this.lblTitleWinner.Size = new System.Drawing.Size(119, 42);
+            this.lblTitleWinner.Size = new System.Drawing.Size(116, 41);
             this.lblTitleWinner.TabIndex = 4;
             this.lblTitleWinner.Text = "Winner";
             // 
@@ -137,7 +137,7 @@
             this.pb3.TabIndex = 15;
             this.pb3.TabStop = false;
             this.pb3.Tag = "0";
-            this.pb3.Click += new System.EventHandler(this.pb3_Click);
+            this.pb3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb5
             // 
@@ -150,7 +150,8 @@
             this.pb5.TabIndex = 14;
             this.pb5.TabStop = false;
             this.pb5.Tag = "0";
-            this.pb5.Click += new System.EventHandler(this.pb5_Click);
+
+            this.pb5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb6
             // 
@@ -163,7 +164,8 @@
             this.pb6.TabIndex = 13;
             this.pb6.TabStop = false;
             this.pb6.Tag = "0";
-            this.pb6.Click += new System.EventHandler(this.pb6_Click);
+
+            this.pb6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb1
             // 
@@ -176,7 +178,7 @@
             this.pb1.TabIndex = 12;
             this.pb1.TabStop = false;
             this.pb1.Tag = "0";
-            this.pb1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb1_MouseClick);
+            this.pb1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb2
             // 
@@ -189,7 +191,8 @@
             this.pb2.TabIndex = 11;
             this.pb2.TabStop = false;
             this.pb2.Tag = "0";
-            this.pb2.Click += new System.EventHandler(this.pb2_Click);
+
+            this.pb2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb9
             // 
@@ -202,7 +205,8 @@
             this.pb9.TabIndex = 10;
             this.pb9.TabStop = false;
             this.pb9.Tag = "0";
-            this.pb9.Click += new System.EventHandler(this.pb9_Click);
+
+            this.pb9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb7
             // 
@@ -215,7 +219,8 @@
             this.pb7.TabIndex = 9;
             this.pb7.TabStop = false;
             this.pb7.Tag = "0";
-            this.pb7.Click += new System.EventHandler(this.pb7_Click);
+         
+            this.pb7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb8
             // 
@@ -228,7 +233,8 @@
             this.pb8.TabIndex = 8;
             this.pb8.TabStop = false;
             this.pb8.Tag = "0";
-            this.pb8.Click += new System.EventHandler(this.pb8_Click);
+
+            this.pb8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // pb4
             // 
@@ -241,7 +247,8 @@
             this.pb4.TabIndex = 7;
             this.pb4.TabStop = false;
             this.pb4.Tag = "0";
-            this.pb4.Click += new System.EventHandler(this.pb4_Click);
+
+            this.pb4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb_MouseClick);
             // 
             // Form1
             // 
@@ -266,7 +273,7 @@
             this.Controls.Add(this.pb4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCheap);
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();

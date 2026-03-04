@@ -20,11 +20,10 @@ namespace Tic_Tac_Toe_Game
 
         }
 
-        public  class clsCount
+        struct Game
         {
             public static int count = 0;
         }
-
         void EndGame(string TheWinner = "Draw")
         {
             pb1.Enabled = false;
@@ -135,7 +134,7 @@ namespace Tic_Tac_Toe_Game
             if (pb.Tag.ToString() == "0")
             {
                 
-                clsCount.count++;
+                Game.count++;
                 if (lblTurn.Text == "Player1")
                 {
                     pb.Image = Resources.X;
@@ -149,7 +148,7 @@ namespace Tic_Tac_Toe_Game
                     pb.Tag = 2;
                     lblTurn.Text = "Player1";
                 }
-                GameStatue(clsCount.count);
+                GameStatue(Game.count);
 
                 
                     
@@ -159,50 +158,26 @@ namespace Tic_Tac_Toe_Game
 
         void Restart()
         {
-
-            pb1.Tag = 0;
-            pb2.Tag = 0;
-            pb3.Tag = 0;
-            pb4.Tag = 0;
-            pb5.Tag = 0;
-            pb6.Tag = 0;
-            pb7.Tag = 0;
-            pb8.Tag = 0;
-            pb9.Tag = 0;
-
-            pb1.Enabled = true;
-            pb2.Enabled = true;
-            pb3.Enabled = true;
-            pb4.Enabled = true;
-            pb5.Enabled = true;
-            pb6.Enabled = true;
-            pb7.Enabled = true;
-            pb8.Enabled = true;
-            pb9.Enabled = true;
+            PictureBox[] pictureBoxes = { pb1 ,  pb2 , pb3 , pb4 , pb5 , pb6 , pb7 , pb8 , pb9 };
 
 
-            pb1.BackColor = Color.Transparent;
-            pb2.BackColor = Color.Transparent;
-            pb3.BackColor = Color.Transparent;
-            pb4.BackColor = Color.Transparent;
-            pb5.BackColor = Color.Transparent;
-            pb6.BackColor = Color.Transparent;
-            pb7.BackColor = Color.Transparent;
-            pb8.BackColor = Color.Transparent;
-            pb9.BackColor = Color.Transparent;
+
+            foreach (PictureBox pb in pictureBoxes)
+            {
+                pb.Tag = 0;
+                pb.Enabled = true;
+                pb.BackColor = Color.Transparent;
+                pb.Image = Resources.question_mark_96;
+
+            }
+
+       
 
 
-            pb1.Image = Resources.question_mark_96;
-            pb2.Image = Resources.question_mark_96;
-            pb3.Image = Resources.question_mark_96;
-            pb4.Image = Resources.question_mark_96;
-            pb5.Image = Resources.question_mark_96;
-            pb6.Image = Resources.question_mark_96;
-            pb7.Image = Resources.question_mark_96;
-            pb8.Image = Resources.question_mark_96; 
-            pb9.Image = Resources.question_mark_96;
+            
 
-            clsCount.count = 0;
+        
+            Game.count = 0;
             lblTurn.Text = "Player1";
 
         }
@@ -224,55 +199,13 @@ namespace Tic_Tac_Toe_Game
         }
 
        
-        private void Form1_Load(object sender, EventArgs e)
+    
+        private void pb_MouseClick(object sender, MouseEventArgs e)
         {
-
+            PlayerAnswer((PictureBox) sender);
         }
+      
 
-        private void pb1_MouseClick(object sender, MouseEventArgs e)
-        {
-            PlayerAnswer(pb1);
-        }
-
-        private void pb2_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb2);
-        }
-
-        private void pb3_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb3);
-        }
-
-        private void pb4_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb4);
-        }
-
-        private void pb5_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb5);
-        }
-
-        private void pb6_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb6);
-        }
-
-        private void pb7_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb7);
-        }
-
-        private void pb8_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb8);
-        }
-
-        private void pb9_Click(object sender, EventArgs e)
-        {
-            PlayerAnswer(pb9);
-        }
 
         private void lblTitle_Click(object sender, EventArgs e)
         {
